@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web View Controller-->
+        <scene sceneID="H4k-gl-Djt">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="vpr-q2-aYt" customClass="WebViewController" customModule="fishShooter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J5K-l5-odq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iP6-W1-dTF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="aLe-XV-ea7">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h5D-kI-d73"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aLe-XV-ea7" firstAttribute="centerX" secondItem="J5K-l5-odq" secondAttribute="centerX" id="5mu-MR-YtM"/>
+                            <constraint firstItem="iP6-W1-dTF" firstAttribute="leading" secondItem="h5D-kI-d73" secondAttribute="leading" id="ARL-u0-q8g"/>
+                            <constraint firstItem="aLe-XV-ea7" firstAttribute="centerY" secondItem="J5K-l5-odq" secondAttribute="centerY" id="QFH-8j-aOF"/>
+                            <constraint firstItem="h5D-kI-d73" firstAttribute="bottom" secondItem="iP6-W1-dTF" secondAttribute="bottom" id="dOh-uA-KDN"/>
+                            <constraint firstItem="iP6-W1-dTF" firstAttribute="top" secondItem="h5D-kI-d73" secondAttribute="top" id="tGW-KR-op5"/>
+                            <constraint firstItem="h5D-kI-d73" firstAttribute="trailing" secondItem="iP6-W1-dTF" secondAttribute="trailing" id="xdj-oi-8WI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="aLe-XV-ea7" id="aPh-iY-GcK"/>
+                        <outlet property="webView" destination="iP6-W1-dTF" id="Mmp-kg-XBB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqq-xa-mmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-773" y="7"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="dsf-GD-q3P">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" id="0Ug-rs-ulX" customClass="ResultsViewController" customModule="fishShooter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iD7-6y-nhE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZu-AS-427">
+                                <rect key="frame" x="0.0" y="-59" width="393" height="935"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="F8g-jp-gHe">
+                                <rect key="frame" x="186" y="411" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9uw-V6-cdT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9uw-V6-cdT" firstAttribute="bottom" secondItem="JZu-AS-427" secondAttribute="bottom" constant="-34" id="G0M-Wy-FVk"/>
+                            <constraint firstItem="9uw-V6-cdT" firstAttribute="trailing" secondItem="JZu-AS-427" secondAttribute="trailing" id="Lb6-Bn-tRM"/>
+                            <constraint firstItem="JZu-AS-427" firstAttribute="top" secondItem="9uw-V6-cdT" secondAttribute="top" constant="-59" id="VtW-Vv-DvD"/>
+                            <constraint firstItem="JZu-AS-427" firstAttribute="leading" secondItem="9uw-V6-cdT" secondAttribute="leading" id="pou-Sk-jBA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Dg-fX-Q7X"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="F8g-jp-gHe" id="Uv2-jz-ilK"/>
+                        <outlet property="webView" destination="JZu-AS-427" id="lAC-kC-wWf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWs-Rs-SZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732.06106870229007" y="729.57746478873241"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" id="BV1-FR-VrT" customClass="GameViewController" customModule="fishShooter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="0Ug-rs-ulX" kind="show" id="i0f-r0-0SR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
